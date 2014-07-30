@@ -1,0 +1,65 @@
+{{!< default}}
+
+{{> nav}}
+
+<section class="posts nav-margin">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+          {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <div class="blog-details">
+          <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+          <h4 class="blog-description">{{@blog.description}}</h4>
+        </div>
+          {{> socials}}
+          {{> tags}}
+      </div>
+      <div class="col-lg-9">
+          {{! Each post will be output using this markup }}
+          {{#foreach posts}}
+            <article class="{{post_class}} non-visible">
+              <header class="post-header">
+                <div class="hide post-cover" data-url="{{@blog.url}}{{url}}" data-post="{{id}}" {{#if @blog.cover}}data-image="{{@blog.cover}}"{{/if}}>
+                    {{content words="0"}}
+                </div>
+              </header>
+              <div class="post-main">
+                <div class="post-featured"><span class="fa fa-star"></span></div>
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                <div class="post-meta">
+                  <div class="pull-right">
+                    <span class="fa fa-clock-o post-date"></span> <time datetime="{{date format='DD-MM-YYYY'}}" class="post-day-month">{{date format="DD MMM YYYY"}}</time>
+                      {{#if tags}}
+                        <span class="fa fa-tags post-tags"></span>
+                          {{tags separator=" &bull; "}}
+                      {{/if}}
+                  </div>
+                  <div class="post-user">
+                    <img src="{{user.image}}" alt="{{user.name}}"/>
+                    <span class="post-user-name">{{user.name}}</span>
+                  </div>
+                </div>
+                <div class="post-excerpt">
+                        {{excerpt words="80"}}&hellip;
+                </div>
+                <div class="post-more">
+                  <a class="read-more" href="{{url}}">Continue Read <span class="fa fa-arrow-right"></span></a>
+                </div>
+              </div>
+            </article>
+          {{/foreach}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="posts-pagination">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          {{!! After all the posts, we have the previous/next pagination links }}
+          {{pagination}}
+      </div>
+    </div>
+  </div>
+</section>

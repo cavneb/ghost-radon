@@ -1,0 +1,39 @@
+{{!< default}}
+
+{{> nav}}
+
+{{#post}}
+  <section class="blog-post-header nav-margin" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="wrapper"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <h2 class="post-title">{{{title}}}</h2>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+          {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <div class="blog-details">
+          <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+          <h4 class="blog-description">{{@blog.description}}</h4>
+        </div>
+          {{> socials}}
+          {{> tags}}
+      </div>
+      <div class="col-lg-9">
+        <article class="{{post_class}}">
+          <div class="post-main">
+            <div class="post-content">
+                {{content}}
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+{{/post}}

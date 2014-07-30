@@ -1,0 +1,74 @@
+.blog-header {
+  background-color: #00ca92;
+}
+.blog-title a:hover,
+.blog-title a:focus {
+  color: #00ca92;
+}
+.nav-top {
+  background-color: #00ca92;
+}
+.nav-top a:hover,
+.nav-top a:focus {
+  color: #00976d;
+}
+a {
+  color: #00ca92;
+}
+a:hover,
+a:focus {
+  color: #00976d;
+}
+blockquote {
+  border-left: 5px solid #00ca92;
+}
+.btn-dark {
+  background-color: rgba(0, 202, 146, 0.5);
+}
+.btn-dark:hover {
+  background-color: rgba(0, 202, 146, 0.9);
+}
+.post-cover a {
+  color: #00fdb7;
+  border: #00fdb7 solid 2px;
+}
+.post-cover a:hover {
+  color: #00ca92;
+  border-color: #00ca92;
+}
+.post-featured {
+  background-color: #00ca92;
+}
+.post-featured:after {
+  border-color: transparent #00ca92 transparent transparent;
+}
+.post-featured:before {
+  border-color: transparent transparent transparent #00ca92;
+}
+.post-meta a:hover,
+.post-meta a:focus {
+  color: #00976d;
+}
+.post-meta .fa {
+  color: #00ca92;
+}
+.post-footer .post-tags a:hover,
+.blog-tags .post-tags a:hover,
+.post-footer .post-tags a:focus,
+.blog-tags .post-tags a:focus {
+  background-color: #00ca92;
+}
+.post-more a {
+  background: #00ca92;
+}
+.post-more a:hover,
+.post-more a:focus {
+  background-color: #00976d;
+}
+.page-tag {
+  color: #00ca92;
+}
+.blog-footer a:hover,
+.blog-footer a:focus {
+  color: #00fdb7;
+}
